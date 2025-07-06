@@ -28,7 +28,7 @@ This is an actual photo of the physical setup on a breadboard:
 ![Wiring Image](Breadbored_setup.jpg)
 
 # Alternative Control Modes
-1. Momentary Mode - LED lights only while pressing the button.
+1. Momentary Mode | LED lights only while pressing the button.
 ```cpp
 void loop() {
   for (int i = 0; i < 3; i++) {
@@ -36,7 +36,7 @@ void loop() {
   }
 }
 ```
-2. Long Press Mode - 1-second hold required
+2. Long Press Mode | 1-second hold required
  Add above setup():  
 ```cpp
 unsigned long pressStart[3] = {0};
@@ -86,8 +86,7 @@ void loop() {
   }
 }
 ```
-4. Combo Mode (Press Button 1+2)
-Special control when two buttons are pressed together:
+4. Combo Mode (Press Button 1+2) | Special control when two buttons are pressed together:
 ```cpp
 void loop() {
   // Combo action (Buttons 1+2 control LED 3)
