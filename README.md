@@ -20,4 +20,5 @@ Each button toggles its corresponding LED ON/OFF on every press.
 - LEDs are active HIGH (use 1000 kΩ resistor in series).
 
 # Tinkercad Simulation Diagram
+This is the circuit layout as designed in Tinkercad:
 ![Wiring Image](Button_Led.png)
