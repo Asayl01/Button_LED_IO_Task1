@@ -7,7 +7,7 @@ Each button toggles its corresponding LED ON/OFF on every press.
 - 3 × LEDs
 - 3 × 1000 kΩ resistors
 - 3 × Push buttons
-- Jumper wires
+- Jumper wires (Male-Male)
 - Breadboard
 
 # Wiring Guide
