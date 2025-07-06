@@ -37,12 +37,12 @@ void loop() {
 }
 ```
 2. Long Press Mode | 1-second hold required
-   
+ Add above setup():  
 ```cpp
 unsigned long pressStart[3] = {0};
 const unsigned long LONG_PRESS = 1000;
 ```
-
+New loop():
 ```cpp void loop() {
   for (int i = 0; i < 3; i++) {
     if (digitalRead(buttonPins[i]) == LOW) {
@@ -56,8 +56,35 @@ const unsigned long LONG_PRESS = 1000;
       pressStart[i] = 0;
     }
   }
-}```
+}
+```
+3. Double-Click Detection
+Add above setup():
+```cpp
+unsigned long lastClick[3] = {0};
+byte clickCount[3] = {0};
+const unsigned long DBL_CLICK_DELAY = 300; // 300ms window
+```
+New loop():
+```cpp
+void loop() {
+  for (int i = 0; i < 3; i++) {
+    if (digitalRead(buttonPins[i]) == LOW && !buttonPressed[i]) {
+      buttonPressed[i] = true;
+      if (millis() - lastClick[i] < DBL_CLICK_DELAY) clickCount[i]++;
+      else clickCount[i] = 1;
+      lastClick[i] = millis();
 
-
+      if (clickCount[i] == 2) {
+        ledStates[i] = !ledStates[i];
+        digitalWrite(ledPins[i], ledStates[i]);
+        clickCount[i] = 0;
+      }
+    } else if (digitalRead(buttonPins[i]) == HIGH) {
+      buttonPressed[i] = false;
+    }
+  }
+}
+```
 
 
