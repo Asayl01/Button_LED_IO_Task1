@@ -10,7 +10,7 @@ Each button toggles its corresponding LED ON/OFF on every press.
 - Jumper wires (Male-Male)
 - Breadboard
 
-# Wiring Guide
+## Wiring Guide
 | LED | Pin | Button | Pin |
 |-----|-----|--------|-----|
 | 1   | D2  | 1      | D5  |
@@ -19,15 +19,15 @@ Each button toggles its corresponding LED ON/OFF on every press.
 - Buttons use `INPUT_PULLUP` and connect to GND.
 - LEDs are active HIGH (use 1000 kΩ resistor in series).
 
-# Simulation Wiring (Tinkercad)
+## Simulation Wiring (Tinkercad)
 This is the circuit layout as designed in Tinkercad:
 ![Wiring Image](Button_Led.png)
 
-# Real-life Circuit (Breadboard Setup)
+## Real-life Circuit (Breadboard Setup)
 This is an actual photo of the physical setup on a breadboard:
 ![Wiring Image](Breadbored_setup.jpg)
 
-# Alternative Control Modes
+## Alternative Control Modes
 This project supports multiple interaction patterns for LED control. You can easily switch between these modes by modifying the loop() function while maintaining the same hardware setup.
 
 1. Momentary Mode | LED lights only while pressing the button.
