@@ -29,7 +29,8 @@ This is an actual photo of the physical setup on a breadboard:
 
 # Alternative Control Modes
 1. Momentary Mode
-LED lights only while pressing the button
+LED lights only while pressing the button.
+```cpp
 void loop() {
   for (int i = 0; i < 3; i++) {
     digitalWrite(ledPins[i], digitalRead(buttonPins[i]) == LOW ? HIGH : LOW);
