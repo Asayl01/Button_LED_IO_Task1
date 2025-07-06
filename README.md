@@ -28,7 +28,8 @@ This is an actual photo of the physical setup on a breadboard:
 ![Wiring Image](Breadbored_setup.jpg)
 
 # Alternative Control Modes
-This project supports multiple interaction patterns for LED control. You can easily experiment with various LED control methods by modifying the code. Here are several approaches to try:
+This project supports multiple interaction patterns for LED control. You can easily switch between these modes by modifying the loop() function while maintaining the same hardware setup.
+
 1. Momentary Mode | LED lights only while pressing the button.
 ```cpp
 void loop() {
