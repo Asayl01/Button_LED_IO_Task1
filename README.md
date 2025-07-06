@@ -36,6 +36,7 @@ void loop() {
     digitalWrite(ledPins[i], digitalRead(buttonPins[i]) == LOW ? HIGH : LOW);
   }
 }
+```
 
 
 
