@@ -19,6 +19,11 @@ Each button toggles its corresponding LED ON/OFF on every press.
 - Buttons use `INPUT_PULLUP` and connect to GND.
 - LEDs are active HIGH (use 1000 kΩ resistor in series).
 
-# Tinkercad Simulation Diagram
+# Simulation Wiring (Tinkercad)
 This is the circuit layout as designed in Tinkercad:
 ![Wiring Image](Button_Led.png)
+
+# Real-life Circuit (Breadboard Setup)
+This is an actual photo of the physical setup on a breadboard:
+
+
