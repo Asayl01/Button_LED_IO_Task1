@@ -27,6 +27,10 @@ This is the circuit layout as designed in Tinkercad:
 This is an actual photo of the physical setup on a breadboard:
 ![Wiring Image](Breadbored_setup.jpg)
 
+
+<span style="color:blue"> ## Alternative Control Modes
+ </span>
+
 ## Alternative Control Modes
 This project supports multiple interaction patterns for LED control. You can easily switch between these modes by modifying the loop() function while maintaining the same hardware setup.
 
