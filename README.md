@@ -25,5 +25,6 @@ This is the circuit layout as designed in Tinkercad:
 
 # Real-life Circuit (Breadboard Setup)
 This is an actual photo of the physical setup on a breadboard:
+![Wiring Image](Breadbored_setup.jpg)
 
 
