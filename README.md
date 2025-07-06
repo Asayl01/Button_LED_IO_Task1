@@ -28,8 +28,7 @@ This is an actual photo of the physical setup on a breadboard:
 ![Wiring Image](Breadbored_setup.jpg)
 
 # Alternative Control Modes
-1. Momentary Mode
-LED lights only while pressing the button.
+1. Momentary Mode | LED lights only while pressing the button.
 ```cpp
 void loop() {
   for (int i = 0; i < 3; i++) {
@@ -37,6 +36,27 @@ void loop() {
   }
 }
 ```
+2. Long Press Mode | 1-second hold required
+   
+```cpp
+unsigned long pressStart[3] = {0};
+const unsigned long LONG_PRESS = 1000;
+```
+
+```cpp void loop() {
+  for (int i = 0; i < 3; i++) {
+    if (digitalRead(buttonPins[i]) == LOW) {
+      if (pressStart[i] == 0) pressStart[i] = millis();
+      if (millis() - pressStart[i] >= LONG_PRESS) {
+        ledStates[i] = !ledStates[i];
+        digitalWrite(ledPins[i], ledStates[i]);
+        pressStart[i] = 0;
+      }
+    } else {
+      pressStart[i] = 0;
+    }
+  }
+}```
 
 
 
