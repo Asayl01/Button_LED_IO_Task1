@@ -59,7 +59,7 @@ New loop():
 }
 ```
 3. Double-Click Detection
-Add above setup():
+\n Add above setup():
 ```cpp
 unsigned long lastClick[3] = {0};
 byte clickCount[3] = {0};
@@ -80,6 +80,29 @@ void loop() {
         digitalWrite(ledPins[i], ledStates[i]);
         clickCount[i] = 0;
       }
+    } else if (digitalRead(buttonPins[i]) == HIGH) {
+      buttonPressed[i] = false;
+    }
+  }
+}
+```
+4. Combo Mode (Press Button 1+2)
+Special control when two buttons are pressed together:
+```cpp
+void loop() {
+  // Combo action (Buttons 1+2 control LED 3)
+  if (digitalRead(buttonPins[0]) == LOW && digitalRead(buttonPins[1]) == LOW) {
+    digitalWrite(ledPins[2], HIGH);
+  } else {
+    digitalWrite(ledPins[2], LOW);
+  }
+
+  // Default toggle for other buttons
+  for (int i = 0; i < 2; i++) {
+    if (digitalRead(buttonPins[i]) == LOW && !buttonPressed[i]) {
+      buttonPressed[i] = true;
+      ledStates[i] = !ledStates[i];
+      digitalWrite(ledPins[i], ledStates[i]);
     } else if (digitalRead(buttonPins[i]) == HIGH) {
       buttonPressed[i] = false;
     }
