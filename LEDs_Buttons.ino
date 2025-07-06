@@ -1,8 +1,6 @@
-// تعيين الأرجل
 const int ledPins[]    = {2, 3, 4};
 const int buttonPins[] = {5, 6, 7};
 
-// حالات الليدات
 bool ledStates[]       = {false, false, false};
 bool buttonPressed[]   = {false, false, false};
 
