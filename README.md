@@ -37,7 +37,7 @@ void loop() {
 }
 ```
 2. Long Press Mode | 1-second hold required
- Add above setup():  
+
 ```cpp
 unsigned long pressStart[3] = {0};
 const unsigned long LONG_PRESS = 1000;
@@ -59,7 +59,6 @@ New loop():
 }
 ```
 3. Double-Click Detection
-\n Add above setup():
 ```cpp
 unsigned long lastClick[3] = {0};
 byte clickCount[3] = {0};
